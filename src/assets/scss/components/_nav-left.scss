@@ -1,0 +1,125 @@
+.navbar-left {
+  position: fixed;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  left: 0;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+  overflow-x: auto;
+  background-color: var(--ux-dark);
+  color: white;
+
+  &,
+  ul {
+    &, li {
+      &, a, button {
+        &, span {
+          transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+        }
+      }
+    }
+  }
+
+  &.nav-open {
+    &, ul {
+      width: var(--navbar-left-open);
+    }
+    .title {
+      opacity: 1;
+    }
+  }
+  &.nav-close {
+    &, ul {
+      width: var(--navbar-left-close);
+    }
+    .title {
+      opacity: 1;
+    }
+  }
+
+  ul {
+    &, li, a, button {
+      overflow: hidden;
+    }
+    li {
+      padding: 0.6rem 0;
+      a, button {
+        display: block;
+        width: var(--navbar-left-open);
+        &.active {
+          span {
+            &.icon, &.title {
+              &, i {
+                transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+                color: white;
+              }
+            }
+          }
+        }
+        span {
+          display: block;
+          float: left;
+          &.icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: var(--navbar-left-close);
+            i {
+              font-size: 1.2rem;
+              color: rgba(255, 255, 255, 0.6);
+            }
+          }
+          &.title {
+            color: rgba(255, 255, 255, 0.6);;
+            width: calc( var(--navbar-left-open) - var(--navbar-left-close) );
+          }
+        }
+      }
+    }
+  }
+
+  ol {
+    padding-top: 0.4rem;
+    &.dropdown {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+
+      &.active {
+        opacity: 1;
+        height: auto;
+      }
+
+      li {
+        background: black;
+        padding-bottom: 0.4rem;
+        transition: all 0.3s ease-in;
+        &:hover {
+          color: white;
+        }
+
+        a {
+          span {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.6);
+            &.icon {
+              padding-left: 1rem;
+              i {
+                font-size: 0.7rem;
+              }
+            }
+            &.title {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

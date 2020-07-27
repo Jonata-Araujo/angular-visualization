@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
 
 import { ComponentsModule } from './components/components.module';
 import { ServicesModule } from './services/services.module';
@@ -16,6 +17,7 @@ import { PipesModule } from './pipes/pipes.module';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    RouterModule,
     ComponentsModule,
     ServicesModule,
     PipesModule,

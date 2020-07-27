@@ -1,0 +1,38 @@
+ul, ol, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+*, li  {
+  list-style: none;
+}
+
+*, a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  &, &:active, &:focus {
+    outline: none;
+  }
+}
+
+
+body {
+  transition: color 0.6s cubic-bezier(0.2, 1, 0.22, 1), background-color 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+  &.theme--light {
+    background-color: var(--ux-light);
+    color: black;
+  }
+  &.theme--dark {
+    background-color: var(--ux-dark-500);
+    color: white;
+  }
+}

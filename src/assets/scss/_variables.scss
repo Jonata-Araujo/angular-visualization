@@ -1,0 +1,24 @@
+$header-h: 4rem;
+$nav-close-w: 4rem;
+
+$navbar-left-close: 4rem;
+$navbar-left-open: 14rem;
+
+$ux-dark: #141414;
+$ux-dark-500: #2c2c2c;
+
+$ux-light: #f1f1f1;
+$ux-light-500: #d6d6d6;
+
+:root {
+  --header-h: #{$header-h};
+  --nav-close-w: #{$nav-close-w};
+  --navbar-left-close: #{$navbar-left-close};
+  --navbar-left-open: #{$navbar-left-open};
+
+  --ux-dark: #{$ux-dark};
+  --ux-dark-500: #{$ux-dark-500};
+
+  --ux-light: #{$ux-light};
+  --ux-light-500: #{$ux-light-500};
+}
